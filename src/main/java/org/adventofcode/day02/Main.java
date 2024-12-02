@@ -12,7 +12,7 @@ import java.util.List;
 @UtilityClass
 public class Main {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(final String[] args) throws IOException {
 		// read the file
 		final List<String> inputByLines = FileUtils.readLines(
 			new File(Main.class.getResource("input.txt").getFile()),
@@ -70,7 +70,7 @@ public class Main {
 	}
 
 	private static boolean isSafeReport(final List<Integer> report) {
-		boolean isLevelsIncreasing = report.get(1) > report.getFirst();
+		final boolean isLevelsIncreasing = report.get(1) > report.getFirst();
 		for (int i = 0; i < report.size() - 1; i++) { // because we always look 1 element further
 			final Integer currentLevel = report.get(i);
 			final Integer nextLevel = report.get(i + 1);

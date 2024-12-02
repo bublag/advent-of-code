@@ -16,7 +16,7 @@ import org.apache.commons.io.FileUtils;
 @UtilityClass
 public class Main {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(final String[] args) throws IOException {
 		// read the file
 		final List<String> inputByLines = FileUtils.readLines(
 			new File(Main.class.getResource("input.txt").getFile()),
@@ -54,7 +54,7 @@ public class Main {
 						occurrenceCounter++;
 					}
 				}
-				long similarityScore = (long) leftNumber * occurrenceCounter;
+				final long similarityScore = (long) leftNumber * occurrenceCounter;
 				similarityCacheMap.put(leftNumber, similarityScore);
 			}
 			totalSimilarityScore += similarityCacheMap.get(leftNumber);
