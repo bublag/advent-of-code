@@ -70,8 +70,7 @@ public class Main {
 	}
 
 	private static boolean isSafeReport(final List<Integer> report) {
-		final int subtractionOfSecondFromFirstLevel = report.get(1) - report.getFirst();
-		boolean isLevelsIncreasing = subtractionOfSecondFromFirstLevel > 0;
+		boolean isLevelsIncreasing = report.get(1) > report.getFirst();
 		for (int i = 0; i < report.size() - 1; i++) { // because we always look 1 element further
 			final Integer currentLevel = report.get(i);
 			final Integer nextLevel = report.get(i + 1);
